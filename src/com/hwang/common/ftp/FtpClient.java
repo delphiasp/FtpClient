@@ -66,6 +66,7 @@ public class FtpClient {
 		} catch (Exception e) {
 			e.printStackTrace();
 			log.error(e.getMessage());
+			ftp.disconnect();
 			return false;
 		}
 		return true;
@@ -83,6 +84,7 @@ public class FtpClient {
 		} catch (Exception e) {
 			e.printStackTrace();
 			log.error(e.getMessage());
+			ftp.disconnect();
 			return false;
 		}
 		return true;
